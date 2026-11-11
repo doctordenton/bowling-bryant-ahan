@@ -6,8 +6,15 @@ public class Pins : MonoBehaviour
 
 {
     private bool hasFallen = false;
+    Vector3 startPosition;
+    Quaternion startRotation;
+    
     [SerializeField] float fallAngle = 20;
-
+    void Start()
+    {
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+    }
     bool CheckHasFallen()
     {
         //euler numbers 0 - 360, converting
@@ -31,7 +38,14 @@ public class Pins : MonoBehaviour
         }
     }
 
-    
+    public void ResetPins()
+    {
+        transform.position = startPosition;
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        transform.rotation = startRotation;
+       
+    }
 }
 
 

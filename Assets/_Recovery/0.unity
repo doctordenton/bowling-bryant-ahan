@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 279507240}
   - component: {fileID: 279507245}
   m_Layer: 0
-  m_Name: pin 5 (2)
+  m_Name: pin 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 526770060}
   - component: {fileID: 526770065}
   m_Layer: 0
-  m_Name: pin 5 (1)
+  m_Name: pin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,6 +880,18 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 32525511}
   timerTime: 3
+  myBall: {fileID: 858678572}
+  allPins:
+  - {fileID: 1065910570}
+  - {fileID: 526770065}
+  - {fileID: 279507245}
+  - {fileID: 1218319897}
+  - {fileID: 1405384259}
+  - {fileID: 1659658831}
+  - {fileID: 2068818984}
+  - {fileID: 683557813}
+  - {fileID: 890935040}
+  - {fileID: 1887341934}
 --- !u!1 &683557807
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +907,7 @@ GameObject:
   - component: {fileID: 683557808}
   - component: {fileID: 683557813}
   m_Layer: 0
-  m_Name: pin 5 (4)
+  m_Name: pin 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1600,7 +1612,7 @@ GameObject:
   - component: {fileID: 1065910565}
   - component: {fileID: 1065910570}
   m_Layer: 0
-  m_Name: pin 5 (3)
+  m_Name: pin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1216914757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2388,7 +2400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1551162234
 SphereCollider:
   m_ObjectHideFlags: 0

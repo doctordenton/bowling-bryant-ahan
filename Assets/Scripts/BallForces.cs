@@ -18,8 +18,8 @@ public class BallForces : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //
-        transform.position = startPosition;
+        
+        startPosition = transform.position;
     }
 
     void Update()
@@ -29,7 +29,14 @@ public class BallForces : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        if (Mouse.current.leftButton.wasPressedThisFrame) //check if left mouse button was just clicked
+        if (Mouse.current.leftButton.isPressed)
+
+        {
+
+            UpdateCharge();
+        }
+
+        if (Mouse.current.leftButton.wasReleasedThisFrame) //check if left mouse button was just clicked
         {
             //where did the mouse click in terms of the world. 
             Ray mouseCameraRay = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -48,11 +55,7 @@ public class BallForces : MonoBehaviour
                 }
             }
 
-            //Do not launch in the code above. The press down should only be to start the charge.
-            //When we release the left mouse button is when the launch occurs.
-
-            //To find the launch power we want to do minimum Launch power + (MaxLaunchPower - MinimumLaunchPower * the percentage of time the 
-            
+           
         }
     }
 
@@ -82,9 +85,9 @@ public class BallForces : MonoBehaviour
         chargeTimer += Time.deltaTime;
         chargeTimer = Mathf.Clamp(chargeTimer, 0, maxChargeTimer);
         float percentageCharge = chargeTimer / maxChargeTimer;
-        launchPowerRange = (launchPowerRange + percentageCharge);
+        clickForce = (launchPowerRange * percentageCharge);
 
-        //if (isCharging == true)
+       
 
     }
     void OnTriggerEnter(Collider other)
@@ -95,5 +98,10 @@ public class BallForces : MonoBehaviour
             Debug.Log("gutter collision");
             myManager.EnterReset();
         }
+    }
+
+    public void ResetBall()
+    {
+        transform.position = startPosition;
     }
 }
