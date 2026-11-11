@@ -876,8 +876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61a426e3d984c5418a61a9ea9d11064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Manager
+  state: 0
   score: 0
   scoreText: {fileID: 32525511}
+  timerTime: 3
 --- !u!1 &683557807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1428,7 @@ MonoBehaviour:
   maxLaunch: 0
   chargeTimer: 0
   maxChargeTimer: 3
+  myManager: {fileID: 664209573}
 --- !u!1 &890935034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2091,7 @@ MonoBehaviour:
   maxLaunch: 0
   chargeTimer: 0
   maxChargeTimer: 3
+  myManager: {fileID: 0}
 --- !u!54 &1367658567
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2951,12 +2955,12 @@ GameObject:
   - component: {fileID: 2013202369}
   - component: {fileID: 2013202368}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Gutter L
+  m_TagString: Gutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &2013202368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2972,7 +2976,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3063,12 +3067,12 @@ GameObject:
   - component: {fileID: 2053854428}
   - component: {fileID: 2053854427}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Gutter R
+  m_TagString: Gutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &2053854427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3084,7 +3088,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

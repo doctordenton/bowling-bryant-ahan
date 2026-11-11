@@ -11,11 +11,15 @@ public class BallForces : MonoBehaviour
     public float maxLaunch;
     public float chargeTimer = 0;
     public float maxChargeTimer = 3;
+    public Manager myManager;
+    Vector3 startPosition;
 
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //
+        transform.position = startPosition;
     }
 
     void Update()
@@ -82,5 +86,14 @@ public class BallForces : MonoBehaviour
 
         //if (isCharging == true)
 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Gutter")
+        {
+            Debug.Log("gutter collision");
+            myManager.EnterReset();
+        }
     }
 }
